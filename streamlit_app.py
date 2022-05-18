@@ -47,5 +47,5 @@ streamlit.dataframe(my_data_rows)
 
 
 # Gather the information from the user 
-fruit_choice2 = streamlit.text_input('what fruit whould you like info about?', 'kiwi')
-streamlit.write('the user entered',fruit_choice2)
+fruit_second_choice = streamlit.text_input('what fruit whould you like info about?', 'kiwi')
+streamlit.write('the user entered',fruit_second_choice)
