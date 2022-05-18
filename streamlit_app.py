@@ -33,9 +33,9 @@ try:
     streamlint.error("Please select a fruit to show info")
   else:
      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
-      # Normalization 
-      fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-      streamlit.dataframe(fruityvice_normalized)
+     # Normalization 
+     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+     streamlit.dataframe(fruityvice_normalized)
 except URLError as e:
   streamlint.error()
 
