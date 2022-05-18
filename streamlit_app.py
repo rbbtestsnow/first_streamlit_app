@@ -25,7 +25,11 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header('Fuityvice fruit advice')
 import requests
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+# Gather the information from the user 
+fruit_choice = streamlit.text_input('what fruit whould you like info about?', 'kiwi')
+streamlit.write('the user entered',fruit_choice)
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 
 
 # Normalization 
